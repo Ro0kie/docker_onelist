@@ -1,0 +1,34 @@
+version: "3"
+services:
+  ofelia:
+    restart: always
+    image: mcuadros/ofelia:latest
+    depends_on:
+      - onelist
+    command: daemon --docker
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+
+  onelist:
+    restart: always
+    build: 
+        context: .
+        dockerfile: Dockerfile
+    image: onelist
+    labels:
+      ofelia.enabled: "true"
+      ofelia.job-exec.onelist.schedule: "@every 30s"
+      ofelia.job-exec.onelist.command: "sh /app/restart.sh"
+
+  https-portal:
+    restart: always
+    image: steveltn/https-portal:latest
+    ports:
+      - '80:80'
+      - '443:443'
+    links:
+      - onelist
+    environment:
+      DOMAINS: '你的域名 -> http://onelist:80'
+      #比如 DOMAINS: 'onedrive.danaizi.top -> http://onelist:80'
+      STAGE: 'production'
