@@ -1,3 +1,17 @@
+## declaration
+
+1. 写这个主要是因为onelist的缓存刷新时间貌似没办法改，在 ***config.json*** 里面修改 ***RefreshInterval*** 并不起作用，还有就是加个https
+
+2. 所用到的别人的库包括
+
+   https://github.com/MoeClub/OneList/tree/master/Rewrite
+
+   https://github.com/SteveLTN/https-portal
+
+   https://github.com/mcuadros/ofelia
+
+
+
 ## how to use
 
 1. 首先打开   https://github.com/MoeClub/OneList/tree/master/Rewrite  ，根据README.md 生成***config.json***
