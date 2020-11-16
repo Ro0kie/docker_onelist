@@ -1,3 +1,6 @@
+*** 咳咳，有点问题，先别用。。我有空看看哪里出问题了。。***
+
+
 ## declaration
 
 1. 写这个主要是因为onelist的缓存刷新时间貌似没办法改，在 ***config.json*** 里面修改 ***RefreshInterval*** 并不起作用，还有就是加个https
