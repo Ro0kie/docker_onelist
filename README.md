@@ -1,4 +1,4 @@
-***建议写个简单的dockerfile运行起来，然后用宿主机的cron job运行docker restart <container id> 来刷新缓存，特么的这个库用的方法，倒是可以运行onelist，但是好像宿主机受影响，离谱***
+***建议写个简单的dockerfile运行起来，然后用宿主机的crontab运行docker restart <container id> 来刷新缓存，特么的这个库用的方法，倒是可以运行onelist，但是好像宿主机受影响，离谱***
 
 ## declaration
 
